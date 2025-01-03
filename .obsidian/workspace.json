@@ -165,6 +165,7 @@
   },
   "active": "1c05ca0503286f05",
   "lastOpenFiles": [
+    "docker-compose.yml",
     "_site/Dockerfile",
     "Dockerfile",
     "_site/categories.html",
@@ -177,7 +178,6 @@
     "_includes/icon-github.svg",
     "_includes/icon-github.html",
     "_includes/head.html",
-    "_includes/header.html",
     "_site/posts.md",
     "posts.md",
     "index.md",

@@ -1,0 +1,5 @@
+.git
+.jekyll-cache
+.obsidian
+_site
+Gemfile.lock
