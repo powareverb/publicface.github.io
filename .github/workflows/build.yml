@@ -50,16 +50,16 @@ jobs:
             ghcr.io/${{ vars.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
             ghcr.io/${{ vars.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
 
-      - name: Export image artifact
-        run: |
-          docker image save ${{ env.IMAGE_REPOSITORY_USER }}/${{ env.IMAGE_NAME }}:{{ github.sha }} | gzip > ${{ env.IMAGE_NAME }}-${{ github.sha }}.tar.gz
+      # - name: Export image artifact
+      #   run: |
+      #     docker image save ${{ env.IMAGE_REPOSITORY_USER }}/${{ env.IMAGE_NAME }}:{{ github.sha }} | gzip > ${{ env.IMAGE_NAME }}-${{ github.sha }}.tar.gz
 
-      - name: Upload image artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ env.IMAGE_NAME }}-${{ github.sha }}
-          path: ${{ env.IMAGE_NAME }}-${{ github.sha }}.tar.gz
-          retention-days: 1
+      # - name: Upload image artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: ${{ env.IMAGE_NAME }}-${{ github.sha }}
+      #     path: ${{ env.IMAGE_NAME }}-${{ github.sha }}.tar.gz
+      #     retention-days: 1
 
       - name: Login to DockerHub
         if: ${{ github.ref == 'refs/heads/master' }}
