@@ -1,0 +1,7 @@
+{
+  "trashOption": "local",
+  "showUnsupportedFiles": false,
+  "userIgnoreFilters": [
+    "_site/"
+  ]
+}
